@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    h1{
+      text-align: center;
+    }
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 250px 250px 250px;
+      margin: 20px 20px;
+    }
+
+        /*
+        Not needed
+     .box1{
+      grid-column: 1;
+      grid-row:1;
+    }
+    .box2{
+      grid-column: 2;
+      grid-row:1
+    }
+    .box3{
+      grid-column: 3;
+      grid-row:1
+    }
+
+    .box4{
+      grid-column: 1;
+      grid-row:2;
+    }
+    .box5{
+      grid-column: 2;
+      grid-row:2;
+    }
+    .box6{
+      grid-column: 3;
+      grid-row:2;
+    }
+    .box7{
+      grid-column: 1;
+      grid-row:3;
+    }
+    .box8{
+      grid-column: 2;
+      grid-row:3;
+    }
+    .box9{
+      grid-column: 3;
+      grid-row:3;
+    } */
+
+    .box img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>Beauty of Nature</h1>
+  <div class="grid-container">
+    <div class="box box1"><img src="https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80"></div>
+    <div class="box box2"><img src="https://cloudinary-marketing-res.cloudinary.com/image/upload/w_1300/q_auto/f_auto/hiking_dog_mountain"></div>
+    <div class="box box3"><img src="https://fileinfo.com/img/ss/xl/jpg_44-2.jpg"></div>
+    <div class="box box4"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"></div>
+    <div class="box box5"><img src="https://sample-files.com/downloads/images/jpg/landscape_hires_4000x2667_6.83mb.jpg"></div>
+    <div class="box box6"><img src="https://onlinejpgtools.com/images/examples-onlinejpgtools/sunflower.jpg"></div>
+    <div class="box box7"><img src="https://onlinejpgtools.com/images/examples-onlinejpgtools/mountains-near-water-better-quality.jpg"></div>
+    <div class="box box8"><img src="https://images.unsplash.com/photo-1666389785207-79fd9a364761?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8anBnfGVufDB8fDB8fHww"></div>
+    <div class="box box9"><img src="https://onlinetools.com/images/examples-onlineimagetools/wooden-house-in-middle-of-lake.webp"></div>
+
+  </div>
+
+  <a href="{% url 'my_profile' %}">My Profile</a>
+</body>
+</html>
