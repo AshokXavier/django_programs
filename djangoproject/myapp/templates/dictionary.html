@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Student Details</h1>
+{% for key, value in details.items %}
+
+    <p>{{ key }} : {{ value }}</p>
+
+    {% if value >= 45 %}
+        <p>Pass</p>
+    {% else %}
+        <p>Fail</p>
+    {% endif %}
+
+{% endfor %}
+
+</body>
+</html>
