@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from . models import Student
 
 # Create your views here.
 def image_gallery(request):
@@ -24,3 +25,7 @@ def student_dict(request):
 
 def inhertitance(request):
   return render(request,'child.html')
+
+def class_details(request):
+  students=Student.objects.all()
+  return render(request,'student_details.html',{'details':students})

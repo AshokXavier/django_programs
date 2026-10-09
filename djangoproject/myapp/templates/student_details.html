@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Student Details</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Student No</th>
+        <th>Student Name</th>
+        <th>Student Age</th>
+        <th>Student Course</th>
+        <th>Student Place</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in details %}
+
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.place}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+
+  </table>
+</body>
+</html>
