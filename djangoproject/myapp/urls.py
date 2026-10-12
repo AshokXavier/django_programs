@@ -6,6 +6,8 @@ urlpatterns=[
   path('student_list/',views.student_list,name='student_list'),
   path('student_dict/',views.student_dict,name='student_dict'),
   path('inheritance/',views.inhertitance,name='inheritance'),
-  path('',views.class_details,name='class_details')
+  path('details/',views.class_details,name='class_details'),
+  path('',views.registration,name='student_registration'),
+  path('delete/<student_id>/',views.delete,name='delete')
 ]
 

@@ -26,11 +26,18 @@
         <td>{{i.age}}</td>
         <td>{{i.course}}</td>
         <td>{{i.place}}</td>
+        <td>
+        <form method="POST" action="{% url 'delete' i.id %}">
+              {% csrf_token %}
+          <button type="submit">Delete</button>
+        </form>
+        </td>
       </tr>
       {% endfor %}
 
     </tbody>
 
   </table>
+  <a href="{% url 'student_registration' %}">Register Form</a>
 </body>
 </html>

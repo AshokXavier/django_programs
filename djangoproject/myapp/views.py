@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
 from . models import Student
 
@@ -29,3 +29,21 @@ def inhertitance(request):
 def class_details(request):
   students=Student.objects.all()
   return render(request,'student_details.html',{'details':students})
+
+def registration(request):
+  if request.method=='POST':
+    s_name=request.POST.get('student_name')
+    s_age=request.POST.get('student_age')
+    s_course=request.POST.get('student_course')
+    s_place=request.POST.get('student_place')
+    Student.objects.create(name=s_name,age=s_age,place=s_place,course=s_course)
+    return redirect('class_details')
+  else:
+    return render(request,'form.html')
+
+def delete(request,student_id):
+  student=get_object_or_404(Student,id=student_id)
+  if request.method == 'POST':
+    student.delete()
+    return redirect('class_details')
+
