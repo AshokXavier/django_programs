@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Student Details</h2>
+  <form method="post">
+    {% csrf_token %}
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="student_name" value="{{update.name}}">
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input type="number" class="form-control" id="age" name="student_age" value="{{update.age}}">
+  </div>
+    <div class="mb-3">
+    <label for="course" class="form-label">Course</label>
+    <input type="text" class="form-control" id="course" name="student_course" value="{{update.course}}">
+  </div>
+  <div class="mb-3">
+    <label for="place" class="form-label">Place</label>
+    <input type="text" class="form-control" id="Place" name="student_place" value="{{update.place}}">
+  </div>
+  <button type="submit">Save changes</button>
+  </form>
+  
+</body>
+</html>

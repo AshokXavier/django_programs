@@ -32,6 +32,11 @@
           <button type="submit">Delete</button>
         </form>
         </td>
+        <td>
+        <form method="get" action="{% url 'updated' i.id %}">
+          <button type="submit">Update</button>
+        </form>
+        </td>
       </tr>
       {% endfor %}
 

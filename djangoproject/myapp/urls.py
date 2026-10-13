@@ -8,6 +8,7 @@ urlpatterns=[
   path('inheritance/',views.inhertitance,name='inheritance'),
   path('details/',views.class_details,name='class_details'),
   path('',views.registration,name='student_registration'),
-  path('delete/<student_id>/',views.delete,name='delete')
+  path('delete/<int:student_id>/',views.delete,name='delete'),
+  path('update/<int:student_id>/',views.student_update,name='updated')
 ]
 

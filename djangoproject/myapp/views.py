@@ -47,3 +47,14 @@ def delete(request,student_id):
     student.delete()
     return redirect('class_details')
 
+def student_update(request,student_id):
+  student=get_object_or_404(Student,id=student_id)
+  if request.method=='POST':
+    student.name=request.POST.get('student_name')
+    student.age=request.POST.get('student_age')
+    student.course=request.POST.get('student_course')
+    student.place=request.POST.get('student_place')
+    student.save()
+    return redirect('class_details')
+  
+  return render(request,'update.html',{'update':student})
